@@ -1,0 +1,141 @@
+/* Basic Reset and Layout */
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    margin:20px 10px 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(6, 4, 4, 0.1); /* Add shadow for better visibility */
+
+}
+
+.navbar-brand img {
+    max-height: 60px; /* Adjust the height of the logo */
+}
+
+.form-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Input and Button Styling */
+input.form-control {
+    width: auto; /* Adjust width of input to fit nicely in the navbar */
+    max-width: 300px; /* Limit max width of the input field */
+}
+
+button.btn-success {
+    margin-left: 10px; /* Space between input and button */
+}
+
+/* Carousel Styling */
+#heroCarousel {
+    margin-bottom: 20px;
+}
+
+.carousel-item img {
+    max-height: 500px; /* Adjust height of carousel images */
+    object-fit: cover; /* Cover the container without distorting image */
+}
+
+.carousel-caption {
+    bottom: 20px; /* Adjust the position of the caption */
+}
+
+/* Container Styling */
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Recipe Results Styling */
+#recipeResults {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with space between */
+    max-width: calc(33.333% - 20px); /* Ensure cards don't exceed 3 per row */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content fits within rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For positioning the "View Recipe" button */
+    min-height: 300px; /* Ensure a minimum height for consistent appearance */
+    width: 100%; /* Allow card to stretch to full width if needed */
+    max-width: 400px; /* Adjust to your preferred maximum width */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover */
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Hide overflow text if it exceeds the card */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px; /* Space between text and button */
+}
+
+.btn-view-recipe {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Hide the button by default */
+    transform: translateY(10px); /* Position the button slightly below */
+}
+
+.card:hover .btn-view-recipe {
+    opacity: 1; /* Show the button on card hover */
+    transform: translateY(0); /* Move the button to its original position */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Stack cards vertically on small screens */
+        max-width: 100%;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
